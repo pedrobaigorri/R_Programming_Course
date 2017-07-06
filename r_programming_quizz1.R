@@ -29,6 +29,8 @@ hw_data[47,"Ozone"]
 column_ozone <- hw_data[,"Ozone"]
 column_ozone_na<-(is.na(column_ozone))
 sum(column_ozone_na)
+# another way to do it
+nrow(hw_data[is.na(hw_data$Ozone),])
 
 #What is the mean of the Ozone column in this dataset? Exclude missing values (coded as NA) from this calculation.
 column_ozone_without_na<-column_ozone[!column_ozone_na]
